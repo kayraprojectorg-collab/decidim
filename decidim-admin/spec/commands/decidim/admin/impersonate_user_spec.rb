@@ -4,8 +4,6 @@ require "spec_helper"
 
 module Decidim::Admin
   describe ImpersonateUser do
-    include ActiveSupport::Testing::TimeHelpers
-
     subject { described_class.new(form) }
 
     let(:organization) { create(:organization) }

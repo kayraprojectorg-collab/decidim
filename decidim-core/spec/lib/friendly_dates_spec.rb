@@ -4,8 +4,6 @@ require "spec_helper"
 
 module Decidim
   describe FriendlyDates do
-    include ActiveSupport::Testing::TimeHelpers
-
     let(:enhanced_class) do
       Class.new do
         include FriendlyDates

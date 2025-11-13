@@ -78,7 +78,6 @@ describe "Meeting live event" do
         expect(page).to have_css("[aria-label='User account: #{user.name}']")
         expect(page).to have_no_content("If you continue being inactive", wait: 4)
         expect(page).to have_no_content("You were inactive for too long")
-        travel_back
       end
 
       context "and ends soon" do
@@ -89,7 +88,6 @@ describe "Meeting live event" do
           expect(page).to have_content("If you continue being inactive", wait: 30)
           allow(Time).to receive(:current).and_return(1.minute.from_now)
           expect(page).to have_content("You are not allowed to view this meeting")
-          travel_back
         end
       end
     end

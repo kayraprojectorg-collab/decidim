@@ -3,8 +3,6 @@
 require "spec_helper"
 
 describe "Session timeout" do
-  include ActiveSupport::Testing::TimeHelpers
-
   let(:organization) { create(:organization) }
   let(:current_user) { create(:user, :confirmed, organization:) }
 

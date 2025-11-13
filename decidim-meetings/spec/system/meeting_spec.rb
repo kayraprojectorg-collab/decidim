@@ -186,7 +186,6 @@ describe "Meeting", download: true do
         travel 1.minute
         expect(page).to have_no_content("If you continue being inactive", wait: 4)
         expect(page).to have_no_content("You were inactive for too long")
-        travel_back
       end
     end
 
@@ -197,7 +196,6 @@ describe "Meeting", download: true do
         visit_meeting
         travel 1.minute
         expect(page).to have_content("You were inactive for too long")
-        travel_back
       end
 
       context "when comments are enabled" do

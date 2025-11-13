@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 shared_examples "manage impersonations examples" do
-  include ActiveSupport::Testing::TimeHelpers
-
   let(:organization) { create(:organization, available_authorizations:) }
   let(:available_authorizations) { ["dummy_authorization_handler"] }
   let(:document_number) { "123456789X" }
