@@ -1,0 +1,337 @@
+/* RTL (Right-to-Left) Support for Admin Interface */
+
+html[dir="rtl"] {
+  /* Text alignment */
+  body {
+    text-align: right;
+  }
+
+  /* Layout wrapper - swap navigation and content order */
+  .relative.md\:flex {
+    flex-direction: row-reverse;
+  }
+
+  /* Navigation positioning */
+  .layout-nav {
+    @apply md:border-l md:border-r-0;
+
+    .main-nav {
+      @apply text-center;
+    }
+  }
+
+  .layout-wrapper.is-nav-open .layout-nav {
+    @apply translate-x-0;
+  }
+
+  /* Title bar */
+  .title-bar {
+    text-align: right;
+
+    .layout-content__container {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .tool-bar {
+    @apply mr-auto ml-0;
+
+    flex-direction: row-reverse;
+  }
+
+  /* Menu trigger button */
+  .menu-trigger {
+    @apply float-right;
+  }
+
+  /* Logo positioning */
+  .logo {
+    svg {
+      @apply right-1/2 left-auto;
+
+      transform: translate(50%, -50%);
+    }
+  }
+
+  /* Menu items */
+  .main-nav ul {
+    a {
+      text-align: center;
+    }
+  }
+
+  /* Main tabs menu */
+  .main-tabs-menu {
+    &__tabs {
+      .is-active a::after {
+        @apply right-0 left-auto;
+      }
+    }
+
+    &__buttons {
+      @apply sm:mr-auto sm:ml-0;
+    }
+  }
+
+  /* Icons and arrows - flip directional icons */
+  .icon,
+  svg {
+    &.icon--chevron-right,
+    &.icon--chevron-left,
+    &.icon--arrow-right,
+    &.icon--arrow-left {
+      transform: scaleX(-1);
+    }
+  }
+
+  /* Dropdown menus */
+  .dropdown {
+    text-align: right;
+
+    &__menu {
+      @apply right-auto left-0;
+    }
+  }
+
+  /* Forms */
+  .form-group,
+  .field,
+  .input-field {
+    text-align: right;
+  }
+
+  label {
+    text-align: right;
+  }
+
+  .help-text {
+    text-align: right;
+  }
+
+  /* Input groups */
+  .input-group {
+    flex-direction: row-reverse;
+
+    .input-group-label {
+      @apply rounded-r-none rounded-l border-r-0 border-l;
+    }
+
+    .input-group-field {
+      @apply rounded-l-none rounded-r;
+    }
+  }
+
+  /* Tables */
+  table {
+    direction: rtl;
+    text-align: right;
+
+    th,
+    td {
+      text-align: right;
+
+      &:first-child {
+        @apply rounded-r rounded-l-none;
+      }
+
+      &:last-child {
+        @apply rounded-l rounded-r-none;
+      }
+    }
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb {
+    direction: rtl;
+
+    li {
+      float: right;
+
+      &::before {
+        @apply pr-2 pl-0;
+
+        content: "\\";
+        transform: scaleX(-1);
+      }
+
+      &:first-child::before {
+        content: none;
+      }
+    }
+  }
+
+  /* Cards */
+  .card {
+    text-align: right;
+
+    &-section {
+      text-align: right;
+    }
+  }
+
+  /* Buttons */
+  .button {
+    .icon,
+    svg {
+      &:first-child {
+        margin-right: 0;
+        margin-left: 0.5rem;
+      }
+
+      &:last-child {
+        margin-left: 0;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  /* Button groups */
+  .button-group {
+    flex-direction: row-reverse;
+
+    .button {
+      &:first-child {
+        @apply rounded-l-none rounded-r;
+      }
+
+      &:last-child {
+        @apply rounded-r-none rounded-l;
+      }
+    }
+  }
+
+  /* Sidebar */
+  .sidebar {
+    text-align: right;
+  }
+
+  /* Secondary navigation */
+  .secondary-nav {
+    text-align: right;
+
+    ul {
+      li {
+        text-align: right;
+      }
+    }
+  }
+
+  /* Filters */
+  .filters {
+    text-align: right;
+  }
+
+  /* Alerts and callouts */
+  .callout,
+  .alert {
+    text-align: right;
+  }
+
+  /* Checkboxes and radios */
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+
+  /* Action buttons alignment */
+  .actions,
+  .form-actions {
+    text-align: left;
+
+    .button {
+      &:first-child {
+        margin-left: 0.5rem;
+        margin-right: 0;
+      }
+    }
+  }
+
+  /* Pagination */
+  .pagination {
+    direction: rtl;
+
+    li {
+      float: right;
+    }
+  }
+
+  /* Tabs */
+  .tabs {
+    direction: rtl;
+    text-align: right;
+
+    .tabs-title {
+      float: right;
+    }
+  }
+
+  /* Modal */
+  .reveal {
+    text-align: right;
+
+    .close-button {
+      @apply left-4 right-auto;
+    }
+  }
+
+  /* Progress bar */
+  .progress {
+    direction: rtl;
+  }
+
+  /* Lists */
+  ul,
+  ol {
+    &:not(.main-nav ul):not(.tab-x-container) {
+      padding-right: 1.5rem;
+      padding-left: 0;
+    }
+  }
+
+  /* Flexbox utilities */
+  .flex {
+    &.justify-start {
+      justify-content: flex-end;
+    }
+
+    &.justify-end {
+      justify-content: flex-start;
+    }
+  }
+
+  /* Grid utilities */
+  .gap-x-2,
+  .gap-x-4 {
+    direction: rtl;
+  }
+
+  /* Text utilities */
+  .text-left {
+    text-align: right !important;
+  }
+
+  .text-right {
+    text-align: left !important;
+  }
+
+  /* Margin utilities */
+  .ml-auto {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .mr-auto {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  /* Float utilities */
+  .float-left {
+    float: right;
+  }
+
+  .float-right {
+    float: left;
+  }
+}

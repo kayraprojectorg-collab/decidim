@@ -1,0 +1,8 @@
+/* Vazirmatn Font - Persian/Farsi Font for RTL support */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+/* Override default font family for admin interface */
+html[dir="rtl"],
+body {
+  font-family: Vazirmatn, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
