@@ -1,1 +1,132 @@
+---
 fa:
+  date:
+    abbr_day_names:
+      - شنب
+      - یکش
+      - دوش
+      - سه‌ش
+      - چها
+      - پنج
+      - جمع
+    abbr_month_names:
+      -
+      - فرو
+      - ارد
+      - خرد
+      - تیر
+      - مرد
+      - شهر
+      - مهر
+      - آبا
+      - آذر
+      - دی
+      - بهم
+      - اسف
+    buttons:
+      close: بستن
+      select: انتخاب
+    day_names:
+      - شنبه
+      - یکشنبه
+      - دوشنبه
+      - سه‌شنبه
+      - چهارشنبه
+      - پنج‌شنبه
+      - جمعه
+    formats:
+      decidim_short: "%Y/%m/%d"
+      decidim_short_dashed: "%Y-%m-%d"
+      decidim_short_with_month_name_short: "%d %b %Y"
+      decidim_with_day_and_month_name: "%A %d %b %Y"
+      decidim_with_month_name: "%d %B %Y"
+      decidim_with_month_name_short: "%d %b"
+      default: "%Y/%m/%d"
+      help:
+        date_format: 'فرمت: سال/ماه/روز'
+      long: "%d %B %Y"
+      short: "%Y/%m/%d"
+      order: y-m-d
+      separator: "/"
+    month_names:
+      -
+      - فروردین
+      - اردیبهشت
+      - خرداد
+      - تیر
+      - مرداد
+      - شهریور
+      - مهر
+      - آبان
+      - آذر
+      - دی
+      - بهمن
+      - اسفند
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: حدود ۱ ساعت
+        other: حدود %{count} ساعت
+      about_x_months:
+        one: حدود ۱ ماه
+        other: حدود %{count} ماه
+      about_x_years:
+        one: حدود ۱ سال
+        other: حدود %{count} سال
+      almost_x_years:
+        one: تقریباً ۱ سال
+        other: تقریباً %{count} سال
+      half_a_minute: نیم دقیقه
+      less_than_x_minutes:
+        one: کمتر از ۱ دقیقه
+        other: کمتر از %{count} دقیقه
+      less_than_x_seconds:
+        one: کمتر از ۱ ثانیه
+        other: کمتر از %{count} ثانیه
+      over_x_years:
+        one: بیش از ۱ سال
+        other: بیش از %{count} سال
+      x_days:
+        one: ۱ روز
+        other: "%{count} روز"
+      x_minutes:
+        one: ۱ دقیقه
+        other: "%{count} دقیقه"
+      x_months:
+        one: ۱ ماه
+        other: "%{count} ماه"
+      x_seconds:
+        one: ۱ ثانیه
+        other: "%{count} ثانیه"
+  field_label:
+    aria_label:
+      date: انتخاب تاریخ برای %{label}
+      time: انتخاب زمان برای %{label}
+    picker:
+      date_button: باز کردن تقویم برای %{label}
+      time_button: باز کردن انتخابگر زمان برای %{label}
+  time:
+    am: قبل از ظهر
+    buttons:
+      close: بستن
+      reset: بازنشانی
+      select: انتخاب
+    clock_format: 24
+    formats:
+      day_of_month: "%d %b"
+      day_of_week: "%a"
+      day_of_week_long: "%a %e"
+      day_of_year: "%Y/%m/%d"
+      ddmm: "%m/%d"
+      ddmmyyyy: "%Y/%m/%d"
+      decidim_day_of_year: "%d %B %Y"
+      decidim_short: "%Y/%m/%d %H:%M"
+      default: "%a، %d %b %Y %H:%M:%S %z"
+      devise:
+        reset_password_email_subject: "%d %B %Y - %H:%M"
+      help:
+        time_format: 'فرمت زمان: ۲۴ ساعته (مثال: ۱۴:۳۰)'
+      long: "%d %B %Y %H:%M"
+      short: "%Y/%m/%d %H:%M"
+      time_of_day: "%H:%M"
+    pm: بعد از ظهر

@@ -55,6 +55,7 @@ Gem::Specification.new do |s|
   s.add_dependency "hexapdf", "~> 1.1.0"
   s.add_dependency "image_processing", "~> 1.2"
   s.add_dependency "invisible_captcha", "~> 0.12"
+  s.add_dependency "parsi-date", "~> 0.5"
   s.add_dependency "kaminari", "~> 1.2", ">= 1.2.1"
   s.add_dependency "loofah", "~> 2.19", ">= 2.19.1"
   s.add_dependency "mime-types", ">= 1.16", "< 4.0"

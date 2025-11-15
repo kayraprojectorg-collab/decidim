@@ -1,4 +1,11 @@
 // Utility helper functions for the date and time picker functionality
+import {
+  isoToJalaliDisplay,
+  jalaliDisplayToISO,
+  shouldUseJalali,
+  gregorianToJalali,
+  formatJalaliDate
+} from "src/decidim/datepicker/jalali_utils";
 
 export const setHour = (value, format) => {
   const hour = value.split(":")[0];
@@ -24,6 +31,14 @@ export const setMinute = (value) => {
 };
 
 export const formatInputDate = (date, formats) => {
+  // Check if we should use Jalali calendar
+  const locale = document.documentElement.lang || "en";
+  if (shouldUseJalali(locale)) {
+    // Convert ISO date (YYYY-MM-DD) to Jalali display format
+    return isoToJalaliDisplay(date, formats);
+  }
+
+  // Original Gregorian logic
   const dateList = date.split("-");
   const year = dateList[0];
   const month = dateList[1];
@@ -146,6 +161,14 @@ export const updateTimeValue = (time, hour, minute) => {
 };
 
 export const formatDate = (value, formats) => {
+  // Check if we should use Jalali calendar
+  const locale = document.documentElement.lang || "en";
+  if (shouldUseJalali(locale)) {
+    // Convert Jalali display format to ISO (YYYY-MM-DD)
+    return jalaliDisplayToISO(value, formats);
+  }
+
+  // Original Gregorian logic
   let newValue = value;
   const splitValue = value.split(formats.separator);
 
@@ -203,6 +226,17 @@ export const updateInputValue = (input, formats, time) => {
 };
 
 export const dateToPicker = (value, formats) => {
+  // Check if we should use Jalali calendar
+  const locale = document.documentElement.lang || "en";
+  if (shouldUseJalali(locale)) {
+    // For Jalali, convert the display format to MM/DD/YYYY for the picker
+    // First convert Jalali to Gregorian ISO, then to picker format
+    const isoDate = jalaliDisplayToISO(value, formats);
+    const [year, month, day] = isoDate.split("-");
+    return `${month}/${day}/${year}`;
+  }
+
+  // Original Gregorian logic
   let formatArray = value.split(formats.separator);
   let formatValue = value;
 
@@ -217,6 +251,15 @@ export const dateToPicker = (value, formats) => {
 };
 
 export const displayDate = (value, formats) => {
+  // Check if we should use Jalali calendar
+  const locale = document.documentElement.lang || "en";
+  if (shouldUseJalali(locale)) {
+    // Convert JavaScript Date to Jalali display format
+    const jalali = gregorianToJalali(value);
+    return formatJalaliDate(jalali.jy, jalali.jm, jalali.jd, formats.separator, formats.order);
+  }
+
+  // Original Gregorian logic
   let day = value.getDate();
   let month = value.getMonth() + 1;
   const year = value.getFullYear();
