@@ -1,3 +1,4 @@
+@use "stylesheets/decidim/admin/fonts";
 @use "stylesheets/decidim/admin/forms";
 @use "stylesheets/decidim/admin/color_picker";
 @use "stylesheets/decidim/admin/main-nav";
@@ -25,6 +26,7 @@
 @use "stylesheets/decidim/admin/minimap";
 @use "stylesheets/decidim/admin/proposal_status";
 @use "stylesheets/decidim/tribute";
+@use "stylesheets/decidim/admin/rtl";
 
 :root {
   --primary: #e02d2d;
