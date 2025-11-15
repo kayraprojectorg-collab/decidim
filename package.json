@@ -30,7 +30,8 @@
   "dependencies": {
     "@decidim/browserslist-config": "file:packages/browserslist-config",
     "@decidim/core": "file:packages/core",
-    "@decidim/webpacker": "file:packages/webpacker"
+    "@decidim/webpacker": "file:packages/webpacker",
+    "jalaali-js": "^1.2.8"
   },
   "devDependencies": {
     "@decidim/dev": "file:packages/dev",
