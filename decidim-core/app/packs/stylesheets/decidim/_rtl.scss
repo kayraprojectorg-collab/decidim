@@ -1,0 +1,239 @@
+/* RTL Support for Persian and other RTL languages */
+
+/* Apply Vazirmatn font for RTL direction */
+[dir="rtl"] {
+  font-family: "Vazirmatn", "Source Sans Pro", ui-sans-serif, system-ui, sans-serif;
+
+  /* Persian number formatting */
+  font-variant-numeric: proportional-nums;
+  font-feature-settings: "ss01" 1; /* Enable Persian numerals in Vazirmatn */
+}
+
+/* Override Tailwind font-sans for RTL */
+[dir="rtl"] .font-sans {
+  font-family: "Vazirmatn", "Source Sans Pro", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* RTL-specific text alignment */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* RTL-specific spacing adjustments */
+[dir="rtl"] .ml-auto {
+  margin-right: auto;
+  margin-left: unset;
+}
+
+[dir="rtl"] .mr-auto {
+  margin-left: auto;
+  margin-right: unset;
+}
+
+/* RTL-specific flexbox */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* RTL-specific positioning */
+[dir="rtl"] .left-0 {
+  right: 0;
+  left: unset;
+}
+
+[dir="rtl"] .right-0 {
+  left: 0;
+  right: unset;
+}
+
+/* RTL decorator positioning */
+[dir="rtl"] .decorator::after {
+  right: 0;
+  left: unset;
+}
+
+/* RTL-specific border radius */
+[dir="rtl"] .rounded-l {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+[dir="rtl"] .rounded-r {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* RTL-specific list styles */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+[dir="rtl"] .prose ul {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+/* RTL-specific form elements */
+[dir="rtl"] input[type="text"],
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="password"],
+[dir="rtl"] input[type="search"],
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+}
+
+/* RTL-specific checkboxes and radio buttons */
+[dir="rtl"] input[type="checkbox"],
+[dir="rtl"] input[type="radio"] {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* RTL-specific button icons */
+[dir="rtl"] .btn svg,
+[dir="rtl"] button svg {
+  transform: scaleX(-1);
+}
+
+/* RTL-specific dropdown menus */
+[dir="rtl"] .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+/* RTL-specific navigation */
+[dir="rtl"] nav ul {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* RTL-specific breadcrumbs */
+[dir="rtl"] .breadcrumb {
+  direction: rtl;
+}
+
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  content: "\\"";
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/* RTL-specific modal */
+[dir="rtl"] .modal-header .close {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* RTL-specific alerts */
+[dir="rtl"] .alert {
+  text-align: right;
+}
+
+/* RTL-specific cards */
+[dir="rtl"] .card {
+  text-align: right;
+}
+
+/* RTL-specific tooltips */
+[dir="rtl"] .tooltip {
+  direction: rtl;
+  text-align: right;
+}
+
+/* RTL-specific progress bars */
+[dir="rtl"] .progress {
+  direction: ltr; /* Keep progress bars LTR for consistency */
+}
+
+/* RTL-specific tables */
+[dir="rtl"] table {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] th,
+[dir="rtl"] td {
+  text-align: right;
+}
+
+/* RTL-specific sidebar */
+[dir="rtl"] .sidebar {
+  right: 0;
+  left: auto;
+}
+
+/* RTL-specific float utilities */
+[dir="rtl"] .float-left {
+  float: right;
+}
+
+[dir="rtl"] .float-right {
+  float: left;
+}
+
+/* RTL-specific transform for arrows and icons */
+[dir="rtl"] .icon-arrow-left::before,
+[dir="rtl"] .icon-arrow-right::before {
+  transform: scaleX(-1);
+}
+
+/* RTL-specific padding for editor content */
+[dir="rtl"] .editor-content ul {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+/* RTL-specific grid alignment */
+[dir="rtl"] .grid {
+  direction: rtl;
+}
+
+/* Ensure numbers display in Persian/Arabic-Indic format */
+[dir="rtl"] {
+  /* This enables Persian numerals if the font supports it */
+  -moz-font-feature-settings: "ss01" 1;
+  -webkit-font-feature-settings: "ss01" 1;
+  font-feature-settings: "ss01" 1;
+}
+
+/* RTL-specific animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+[dir="rtl"] .slide-in-left {
+  animation: slideInRight 0.3s ease-out;
+}
+
+[dir="rtl"] .slide-in-right {
+  animation: slideInLeft 0.3s ease-out;
+}

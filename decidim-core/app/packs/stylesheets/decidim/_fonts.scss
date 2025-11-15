@@ -1,5 +1,46 @@
 /* Generated using: https://gwfh.mranftl.com/fonts */
 
+/* Vazirmatn - Persian/Farsi Font */
+/* vazirmatn-regular - persian */
+@font-face {
+  font-display: swap;
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/decidim/vazirmatn-regular.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
+}
+
+/* vazirmatn-medium - persian */
+@font-face {
+  font-display: swap;
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/decidim/vazirmatn-medium.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
+}
+
+/* vazirmatn-semibold - persian */
+@font-face {
+  font-display: swap;
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/decidim/vazirmatn-semibold.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
+}
+
+/* vazirmatn-bold - persian */
+@font-face {
+  font-display: swap;
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/decidim/vazirmatn-bold.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
+}
+
 /* source-sans-pro-regular - cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext_vietnamese */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

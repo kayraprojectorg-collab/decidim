@@ -38,6 +38,7 @@ import "src/decidim/sw"
 import "src/decidim/attachments"
 import "src/decidim/dropdown_menu"
 import "src/decidim/callout"
+import "src/decidim/persian_numerals"
 
 // local deps that require initialization
 import ConfirmDialog, { initializeConfirm } from "src/decidim/confirm"
